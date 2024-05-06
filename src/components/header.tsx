@@ -50,6 +50,7 @@ export default function Header() {
         </Link> */}
           {nav.map(({ title, href }, i) => (
             <Link
+              key={i}
               href={href}
               className="text-muted-foreground transition-colors hover:text-foreground"
             >
@@ -82,6 +83,7 @@ export default function Header() {
               </Link>
               {nav.map(({ title, href }, i) => (
                 <Link
+                  key={i}
                   href={href}
                   className="text-muted-foreground hover:text-foreground"
                 >

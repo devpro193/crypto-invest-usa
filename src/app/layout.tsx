@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
-const inter = Bricolage_Grotesque({ subsets: ["latin"] });
+const inter = Bricolage_Grotesque({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Crypto Invest USA",
