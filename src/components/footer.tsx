@@ -154,10 +154,27 @@ export default function Footer() {
         </section>
       </div>
 
-      <div className="p-4 flex gap-1 text-xs font-semibold items-center justify-center bg-zinc-950">
-        <span>© 2024</span>
-        <span>CryptoInvestUSA.com</span>
-        {/* <span></span> */}
+      <div className="flex max-sm:flex-col text-sm font-semibold items-center justify-between border-t border-secondary bg-card p-4 px-6 max-w-[90rem] mx-auto">
+        <div className="flex gap-1">
+          <span>© 2024</span>
+          <span>CryptoInvestUSA</span>
+        </div>
+
+        {/* <div className="flex gap-2 flex-wrap">
+          <span>Contact:</span>
+          <span className="text-muted-foreground flex-wrap flex gap-0.5">
+            <Link
+              className="hover:text-primary/70"
+              href={"support@cryptoinvestusa.com"}
+            >
+              support@cryptoinvestusa.com
+            </Link>
+            /
+            <Link className="hover:text-primary/70" href={"tel:+18886733106"}>
+              +18886733106
+            </Link>
+          </span>
+        </div> */}
       </div>
     </footer>
   );

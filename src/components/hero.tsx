@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { Button } from "./ui/button";
 
 export default function Hero({
   title,
@@ -25,7 +26,7 @@ export default function Hero({
         <div className="sm:p-[12.5rem_2.5rem_6.75rem] max-sm:p-[12rem_1rem_2.75rem] m-auto max-w-7xl flex justify-between text-white">
           <section className="grid gap-5">
             <h1
-              className={`max-w-xl max-sm:max-w-sm font-jakarta sm:text-[3.5rem] text-[3rem] font-extrabold text-primary leading-[3rem]`}
+              className={`max-w-xl max-sm:max-w-sm font-jakarta sm:text-[3.5rem] text-[3rem] font-extrabold text-primary leading-[3rem] text-balance`}
             >
               {title}
             </h1>
@@ -33,6 +34,8 @@ export default function Hero({
             <p className="max-w-[35rem] text-lg max-md:text-[1.05rem] max-md:leading-6">
               {desc}
             </p>
+
+            <Button className="w-fit px-6 bg-primary">Invest Now</Button>
           </section>
         </div>
       </div>
