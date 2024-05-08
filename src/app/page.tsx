@@ -2,6 +2,20 @@ import Hero from "@/components/hero";
 import InvestTray from "@/components/invest-tray";
 import Roadmap from "@/components/roadmap";
 import Services from "@/components/services";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://crypto-invest-eight.vercel.app/"),
+  title: "Crypto Invest USA",
+  description: "The new way to invest your digital currency.",
+  openGraph: {
+    images: "/home.png",
+    title: "Crypto Invest USA",
+    description: "The new way to invest your digital currency.",
+    url: "https://cryptoinvestusa.com",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
