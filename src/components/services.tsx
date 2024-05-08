@@ -32,8 +32,10 @@ export default function Services() {
     <div className="p-4 md:p-10">
       <div className="mx-auto grid w-full max-w-6xl gap-10">
         <div className="grid gap-2 mx-auto text-center max-w-lg">
-          <h1 className="text-3xl font-semibold">Services We Provide</h1>
-          <p>
+          <h2 className="text-4xl max-sm:text-3xl font-semibold">
+            Services We Provide
+          </h2>
+          <p className="text-sm text-muted-foreground">
             We build effective strategies to help you reach customers and
             prospects across the entire web.
           </p>

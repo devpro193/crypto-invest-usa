@@ -36,7 +36,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-footer w-full">
+    <footer className="bg-footer w-full border-t border-border">
       <div
         className={`flex max-lg:flex-col items-start p-[4rem_min(6.25rem,_7%)] max-w-[90rem] mx-auto gap-4`}
       >

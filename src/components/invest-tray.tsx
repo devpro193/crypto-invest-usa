@@ -48,10 +48,10 @@ export default function InvestTray() {
 
   return (
     <div className="p-4 md:p-10">
-      <div className="mx-auto grid w-full max-w-6xl gap-10">
-        <h1 className="text-3xl mx-auto text-center font-semibold">
+      <div className="mx-auto grid w-full max-w-6xl gap-8">
+        <h2 className="text-4xl max-sm:text-3xl mx-auto text-center font-semibold px-9">
           Why Invest in Crypto with Us?
-        </h1>
+        </h2>
         <div className="mx-auto grid w-full max-w-6xl items-start gap-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {cards.map(({ title, description, image }, i) => (
