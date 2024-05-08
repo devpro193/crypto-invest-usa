@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/carousel";
 
 import Autoplay from "embla-carousel-autoplay";
+import { right } from "@/lib/fonts";
 
 export default function Roadmap() {
   const slides = [
@@ -102,7 +103,9 @@ export default function Roadmap() {
                     <Card className="bg-muted/40 min-h-[270px]">
                       <CardHeader className="flex gap-2 items-center">
                         <div className="p-1.5 bg-gradient-to-tr from-yellow-600 to-orange-600 backdrop-blur-sm rounded-full flex items-center gap-2 shrink-0 max-w-72 mx-auto">
-                          <div className="p-5 py-2 rounded-full text-3xl bg-muted flex-auto shrink-0 grow">
+                          <div
+                            className={`${right.className} p-5 py-2 rounded-full text-3xl bg-muted flex-auto shrink-0 grow`}
+                          >
                             {index + 1}
                           </div>
                           <CardTitle className="line-clamp-2 text-xl leading-5">
@@ -123,8 +126,10 @@ export default function Roadmap() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="max-sm:hidden" />
-            <CarouselNext className="max-sm:hidden" />
+            <div className="flex gap-2 justify-center py-2 w-full">
+              <CarouselPrevious />
+              <CarouselNext />
+            </div>
           </Carousel>
         </div>
       </div>
