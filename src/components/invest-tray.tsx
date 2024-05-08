@@ -1,16 +1,9 @@
-import Link from "next/link";
-
-import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
 import Image from "next/image";
 
 export default function InvestTray() {
@@ -54,29 +47,16 @@ export default function InvestTray() {
   ];
 
   return (
-    <div className="bg-muted/40 p-4 md:gap-8 md:p-10">
+    <div className="p-4 md:p-10">
       <div className="mx-auto grid w-full max-w-6xl gap-10">
         <h1 className="text-3xl mx-auto text-center font-semibold">
           Why Invest in Crypto with Us?
         </h1>
         <div className="mx-auto grid w-full max-w-6xl items-start gap-6">
-          {/* <nav
-            className="grid gap-4 text-sm text-muted-foreground"
-            x-chunk="dashboard-04-chunk-0"
-          >
-            <Link href="#" className="font-semibold text-primary">
-              General
-            </Link>
-            <Link href="#">Security</Link>
-            <Link href="#">Integrations</Link>
-            <Link href="#">Support</Link>
-            <Link href="#">Organizations</Link>
-            <Link href="#">Advanced</Link>
-          </nav> */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {cards.map(({ title, description, image }, i) => (
-              <Card key={i} x-chunk="dashboard-04-chunk-1">
-                <CardHeader className="items-center">
+              <Card key={i} className="shadow-md shadow-black">
+                <CardHeader className="items-center text-center gap-2">
                   <div className="p-2 bg-gradient-to-tr from-primary to-orange-500 backdrop-blur-sm rounded-full">
                     <div className="p-0.5 w-fit rounded-full bg-muted flex-1">
                       <Image
