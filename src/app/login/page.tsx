@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 
 export default function Login() {
   return (
-    <div className="w-full lg:grid lg:max-h-[500px] lg:grid-cols-2 xl:max-h-[700px] overflow-hidden">
-      <div className="flex items-center justify-center py-12 max-w-3xl w-full max-lg:mx-auto lg:ml-auto">
+    <div className="w-full lg:grid lg:grid-cols-2 place-items-start overflow-hidden">
+      <div className="flex items-start lg:items-center justify-center py-20 px-5 max-w-3xl lg:ml-auto max-lg:mx-auto w-full max-lg:min-h-screen">
         <div className="mx-auto grid w-[350px] gap-6">
           <div className="grid gap-2 text-center">
             <h1 className="text-3xl font-bold">Login</h1>
@@ -56,21 +56,21 @@ export default function Login() {
             <Button type="submit" className="w-full">
               Login
             </Button>
-            <Button variant="outline" className="w-full">
+            {/* <Button variant="outline" className="w-full">
               Login with Google
-            </Button>
+            </Button> */}
           </div>
           <div className="mt-4 text-center text-sm">
             Don&apos;t have an account?{" "}
-            <Link href="#" className="underline">
+            <Link href="/signup" className="underline">
               Sign up
             </Link>
           </div>
         </div>
       </div>
-      <div className="hidden bg-muted lg:block lg:max-h-[500px] xl:max-h-[700px]">
+      <div className="hidden bg-muted lg:block w-full">
         <Image
-          src="https://images.unsplash.com/photo-1640340434855-6084b1f4901c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1640340434855-6084b1f4901c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHsx8fA%3D%3D"
           alt="Image"
           width="1280"
           height="720"

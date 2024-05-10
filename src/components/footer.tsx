@@ -154,7 +154,7 @@ export default function Footer() {
         </section>
       </div>
 
-      <div className="flex max-sm:flex-col text-sm font-semibold items-center justify-between border-t border-secondary bg-card p-4 px-6 max-w-[90rem] mx-auto">
+      <div className="flex text-sm font-semibold items-center justify-center border-t border-secondary bg-card p-4 px-6 max-w-[90rem] mx-auto">
         <div className="flex gap-1">
           <span>© 2024</span>
           <span>CryptoInvestUSA</span>

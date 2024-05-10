@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function Hero({
   title,
@@ -35,7 +36,11 @@ export default function Hero({
               {desc}
             </p>
 
-            <Button className="w-fit px-6 bg-primary">Invest Now</Button>
+            <Link href={"/signup"}>
+              <Button className="w-fit px-6 bg-primary sm:text-lg rounded-full bg-gradient-to-b from-primary to-orange-500 font-bold">
+                Invest Now
+              </Button>
+            </Link>
           </section>
         </div>
       </div>

@@ -8,30 +8,30 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://crypto-invest-eight.vercel.app/"),
-  title: "Crypto Invest USA",
+  title: "About Us | CryptoInvestUSA",
   description: "The new way to invest your digital currency.",
   openGraph: {
     images: "/home.png",
-    title: "Crypto Invest USA",
+    title: "About Us | CryptoInvestUSA",
     description: "The new way to invest your digital currency.",
     url: "https://cryptoinvestusa.com",
     type: "website",
   },
 };
 
-export default function Home() {
+export default function About() {
   return (
     <div className="flex min-h-screen w-full flex-col">
       <Hero
-        title="Invest Your Digital Currency Now!"
-        desc="Experience the Potential of Crypto Investments and Take Control of Your Investments with Crypto Invest USA!"
-        heroImage="https://images.unsplash.com/photo-1576520804567-b88e5dade12d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        title="About Us"
+        desc="Dive into Crypto Investments Today and Explore the World of Digital Assets with Crypto Invest USA"
+        heroImage="https://images.unsplash.com/photo-1631689583462-a640c75d5a4b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col max-md:gap-4 bg-muted/40 pt-2">
-        <InvestTray />
-        <Roadmap />
+        {/* <InvestTray />
+        <Roadmap /> */}
         <Services />
-        <CryptoTable />
+        {/* <CryptoTable /> */}
         <Banner />
       </main>
     </div>
