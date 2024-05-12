@@ -5,36 +5,6 @@ import { Mail } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function Footer() {
-  let cousre = {
-    title: "Courses",
-    href: [
-      {
-        title: "MERN FullStack Course",
-        href: "https://courses.30dayscoding.com/courses/MERN-full-stack-web-development-64eebdb8e4b0a14befedc15d",
-        description:
-          "A complete mern full stack development course for 30 days coding challenge. Checkout on www.courses.30dayscoding.com",
-      },
-      {
-        title: "Master DSA Course",
-        href: "https://courses.30dayscoding.com/courses/DSA-revision-placement-course-64f93394e4b0e75ce98af312",
-        description:
-          "A full dsa mastry course from 30 days coding. Checkout on www.courses.30dayscoding.com",
-      },
-      {
-        title: "Next JS FullStack",
-        href: "https://courses.30dayscoding.com/courses/NEXT-JS-full-stack-web-development-course-64eebe15e4b06aa775217381-64eebe15e4b06aa775217381",
-        description:
-          "A live next js fullstack development cohort from 30 days coding. Checkout on www.courses.30dayscoding.com",
-      },
-      {
-        title: "All Courses Package",
-        href: "https://courses.30dayscoding.com/courses/All-courses-package-652a1994e4b05a145bae5cd0",
-        description:
-          "Get a course from 30 days coding. Checkout on www.courses.30dayscoding.com",
-      },
-    ],
-  };
-
   return (
     <footer className="bg-footer w-full border-t border-border">
       <div

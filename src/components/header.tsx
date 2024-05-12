@@ -1,3 +1,5 @@
+"use client";
+
 import { CircleUser, Lock, LogIn, Menu, Package2, Search } from "lucide-react";
 import {
   DropdownMenu,
@@ -12,12 +14,20 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "./ui/input";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const path = usePathname();
+  const [sideState, setSideState] = useState(false);
+  useEffect(() => {
+    setSideState(false);
+  }, [path]);
+
   const nav = [
     {
       title: "Dashboard",
-      href: "/dashborad",
+      href: "/dashboard",
     },
     {
       title: "About",
@@ -32,7 +42,7 @@ export default function Header() {
   return (
     <div className="sticky z-10 top-0 h-16 border-b bg-background">
       <header className="px-4 md:px-6 max-w-[90rem] mx-auto flex items-center justify-between gap-4 h-16">
-        <Sheet>
+        <Sheet open={sideState} onOpenChange={setSideState}>
           <SheetTrigger asChild>
             <Button
               variant="outline"
@@ -45,15 +55,15 @@ export default function Header() {
           </SheetTrigger>
           <SheetContent side="left">
             <nav className="grid gap-6 text-lg font-medium">
-              <Link
+              {/* <Link
                 href="#"
                 className="flex items-center gap-2 text-lg font-semibold"
               >
-                {/* <Package2 className="h-6 w-6" />
-                <span className="sr-only">Acme Inc</span> */}
-                <Link href={"/"}>
-                  <Image src={"/logo.png"} alt="" width={37} height={37} />
-                </Link>
+                <Package2 className="h-6 w-6" />
+                <span className="sr-only">Acme Inc</span>
+              </Link> */}
+              <Link href={"/"}>
+                <Image src={"/logo.png"} alt="" width={37} height={37} />
               </Link>
               {nav.map(({ title, href }, i) => (
                 <Link

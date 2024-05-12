@@ -8,7 +8,7 @@ export default function FloatBtn() {
       href={
         "https://api.whatsapp.com/send/?phone=61390284223&text&type=phone_number"
       }
-      className="fixed bottom-2 right-2 lg:bottom-4 lg:right-4 flex gap-2 items-center bg-muted shadow-md shadow-background transition-all duration-200 lg:hover:-translate-y-1"
+      className="fixed border bottom-2 right-2 lg:bottom-4 lg:right-4 flex gap-2 items-center bg-muted shadow-md shadow-background transition-all duration-200 lg:hover:-translate-y-1"
     >
       <span className="p-2 bg-background">
         <svg
