@@ -9,8 +9,11 @@ import {
   CircleUserRound,
   Copy,
   CreditCard,
+  Euro,
   File,
+  HandHelping,
   Home,
+  Key,
   LineChart,
   ListFilter,
   MoreVertical,
@@ -60,8 +63,13 @@ import { user } from "@/lib/jotai";
 
 export default function Dashboard({ children }: { children: React.ReactNode }) {
   const path = usePathname();
+  const [side, setSide] = React.useState(false);
   const [userData, setUserData] = useAtom(user);
   const router = useRouter();
+
+  React.useEffect(() => {
+    setSide(false);
+  }, [path]);
 
   React.useEffect(() => {
     if (!userData.lgogedIn) router.push("/login");
@@ -81,7 +89,31 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
       select: path === "/admin",
     },
     {
+      icon: <Euro className="h-5 w-5" />,
+      name: "Fund Account",
+      link: "/account",
+      select: path === "/account",
+    },
+    {
+      icon: <HandHelping className="h-5 w-5" />,
+      name: "Withdraw Funds",
+      link: "/funds",
+      select: path === "/funds",
+    },
+    {
       icon: <LineChart className="h-5 w-5" />,
+      name: "Trade History",
+      link: "/trade",
+      select: path === "/trade",
+    },
+    {
+      icon: <Key className="h-5 w-5" />,
+      name: "Account Verify",
+      link: "/verify",
+      select: path === "/verify",
+    },
+    {
+      icon: <Settings className="h-5 w-5" />,
       name: "Settings",
       link: "/settings",
       select: path === "/settings",
@@ -120,7 +152,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
             ))}
           </TooltipProvider>
         </nav>
-        <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-4">
+        {/* <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-4">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -128,18 +160,18 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
                   href="#"
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
-                  <Settings className="h-5 w-5" />
+                  
                   <span className="sr-only">Settings</span>
                 </Link>
               </TooltipTrigger>
               <TooltipContent side="right">Settings</TooltipContent>
             </Tooltip>
           </TooltipProvider>
-        </nav>
+        </nav> */}
       </aside>
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
         <header className="sticky top-0 z-30 flex h-14 items-center justify-between gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
-          <Sheet>
+          <Sheet open={side} onOpenChange={setSide}>
             <SheetTrigger asChild>
               <Button size="icon" variant="outline" className="sm:hidden">
                 <PanelLeft className="h-5 w-5" />

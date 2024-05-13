@@ -84,12 +84,6 @@ export default function DocForm() {
             [E.g Drivers License, Passport etc]
           </span>
         </Label>
-        {/* <Input
-          name="username"
-          id="username"
-          placeholder="m@example.com"
-          required
-        /> */}
 
         <Select>
           <SelectTrigger className="">

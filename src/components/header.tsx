@@ -16,8 +16,11 @@ import { Input } from "./ui/input";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useAtom } from "jotai";
+import { user } from "@/lib/jotai";
 
 export default function Header() {
+  const [userData] = useAtom(user);
   const path = usePathname();
   const [sideState, setSideState] = useState(false);
   useEffect(() => {
@@ -114,9 +117,9 @@ export default function Header() {
               />
             </div>
           </form> */}
-          {true ? (
+          {!userData.lgogedIn ? (
             <Link href={"/login"}>
-              <Button className="font-semibold text-base rounded-full px-5 gap-0.5">
+              <Button className="font-semibold px-3 py-1 gap-0.5">
                 Login <LogIn className="h-4 w-4" />
               </Button>
             </Link>
