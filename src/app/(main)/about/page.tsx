@@ -1,6 +1,6 @@
 import { Banner } from "@/components/banner";
 import CryptoTable from "@/components/crypto-table";
-import Hero from "@/components/hero";
+import Hero from "@/components/og-hero";
 import InvestTray from "@/components/invest-tray";
 import Roadmap from "@/components/roadmap";
 import Services from "@/components/services";

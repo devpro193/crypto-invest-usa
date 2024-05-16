@@ -1,4 +1,4 @@
-import Hero from "@/components/hero";
+import Hero from "@/components/og-hero";
 import { Metadata } from "next";
 import ContactForm from "./contact-form";
 import { Banner } from "@/components/banner";

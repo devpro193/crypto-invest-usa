@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import ReactQuery from "@/util/queryProvider";
 import { Toaster } from "@/components/ui/sonner";
+import Scroll from "@/components/scroll";
 
 const inter = Bricolage_Grotesque({ subsets: ["latin"], display: "swap" });
 
@@ -19,10 +20,11 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden`}>
         <ReactQuery>
           {children}
           <Footer />
+          <Scroll />
           <Toaster />
         </ReactQuery>
       </body>

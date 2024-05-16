@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Banner = () => {
   return (
@@ -21,9 +22,11 @@ export const Banner = () => {
           Join millions of people around the world buying and selling
           cryptocurrency.
         </h3>
-        <Button className="text-lg w-fit px-12 font-bold rounded-full mt-4 drop-shadow-md bg-gradient-to-b from-primary to-orange-500">
-          Invest With Us Now
-        </Button>
+        <Link href={"/buy-crypto"}>
+          <Button className="text-lg w-fit px-12 font-bold rounded-full mt-4 drop-shadow-md bg-gradient-to-b from-primary to-orange-500">
+            Invest With Us Now
+          </Button>
+        </Link>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import prisma from "@/util/prismaClient";
+import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -27,6 +28,8 @@ export async function POST(req: Request) {
                 password
             }
         });
+
+        revalidatePath("/admin")
 
         return NextResponse.json({ post, user: true }, { status: 201 });
     } catch (err: any) {

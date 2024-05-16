@@ -63,3 +63,28 @@
 input:autofill {
   @apply bg-muted/80;
 }
+
+.scroll {
+  @apply fixed bottom-0 w-[100vw] overflow-hidden z-10 bg-background py-1 border-t;
+}
+
+.m-scroll {
+  overflow: hidden;
+  height: 100%;
+  white-space: nowrap;
+  animation: scrollText 20s infinite linear;
+  margin: 0;
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
