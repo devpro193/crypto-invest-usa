@@ -7,6 +7,7 @@ import Services from "@/components/services";
 import { Metadata } from "next";
 import Image from "next/image";
 import InvestForm from "./invest-form";
+import Exchange from "./exchange";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://crypto-invest-eight.vercel.app/"),
@@ -56,6 +57,7 @@ export default function About() {
             <InvestForm />
           </div>
         </div>
+        <Exchange />
       </main>
     </div>
   );

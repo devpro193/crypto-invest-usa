@@ -66,7 +66,13 @@ export default function Header() {
                 <span className="sr-only">Acme Inc</span>
               </Link> */}
               <Link href={"/"}>
-                <Image src={"/logo.png"} alt="" width={37} height={37} />
+                <Image
+                  src={"/logo.png"}
+                  alt=""
+                  width={150}
+                  height={150}
+                  className="object-cover"
+                />
               </Link>
               {nav.map(({ title, href }, i) => (
                 <Link
@@ -85,9 +91,9 @@ export default function Header() {
             <Image
               src={"/logo.png"}
               alt=""
-              width={37}
-              height={37}
-              className="shrink-0 h-10 w-10"
+              width={150}
+              height={150}
+              className="shrink-0"
             />
           </Link>
           {/* <Link

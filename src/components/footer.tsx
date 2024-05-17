@@ -12,8 +12,8 @@ export default function Footer() {
       >
         <section className="flex-1 flex flex-col gap-3">
           <Link href={"/"} className="flex gap-2 items-center">
-            <Image src={"/logo.png"} alt="name" width={40} height={40} />
-            <span className="text-xl">Crypto Invest USA</span>
+            <Image src={"/logo.png"} alt="name" width={150} height={150} />
+            {/* <span className="text-xl">Crypto Invest USA</span> */}
           </Link>
 
           <span className="max-w-lg">

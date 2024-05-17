@@ -131,7 +131,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
             <span className="sr-only">Acme Inc</span>
           </Link> */}
           <Link href={"/"}>
-            <Image src={"/logo.png"} alt="" width={30} height={30} />
+            <Image src={"/oldlogo.png"} alt="" width={30} height={30} />
           </Link>
           <TooltipProvider>
             {navgation.map(({ icon, link, name, select }, i) => (
@@ -188,7 +188,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
                   <span className="sr-only">Acme Inc</span>
                 </Link> */}
                 <Link href={"/"}>
-                  <Image src={"/logo.png"} alt="" width={37} height={37} />
+                  <Image src={"/oldlogo.png"} alt="" width={37} height={37} />
                 </Link>
 
                 {navgation.map(({ icon, link, name, select }, i) => (

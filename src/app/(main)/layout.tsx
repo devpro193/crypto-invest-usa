@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/header";
+import FloatBtn from "./float";
+import Scroll from "@/components/scroll";
 
 export const metadata: Metadata = {
   title: "Crypto Invest USA",
@@ -15,6 +17,8 @@ export default function MainLayout({
     <div className="flex flex-col">
       <Header />
       {children}
+      <FloatBtn />
+      <Scroll />
     </div>
   );
 }
