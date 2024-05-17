@@ -7,10 +7,15 @@ export default function Hero({
   title,
   desc,
   heroImage,
+  link,
 }: {
   title: string;
   desc: string;
   heroImage: string;
+  link?: {
+    title: string;
+    href: string;
+  };
 }) {
   return (
     <div
@@ -36,9 +41,9 @@ export default function Hero({
               {desc}
             </p>
 
-            <Link href={"/signup"}>
+            <Link href={link?.href ?? "/signup"}>
               <Button className="w-fit px-6 bg-primary sm:text-lg rounded-full bg-gradient-to-b from-primary to-orange-500 font-bold">
-                Invest Now
+                {link?.title ?? "Invest Now"}
               </Button>
             </Link>
           </section>
