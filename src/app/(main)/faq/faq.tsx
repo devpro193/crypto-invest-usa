@@ -90,7 +90,7 @@ export default function Faq() {
             Frequently Asked Questions
           </h2>
           <p className="text-sm text-muted-foreground">
-            Have any questions? We're here to assist you.
+            Have any questions? We&apos;re here to assist you.
           </p>
         </div>
         <div className="mx-auto grid w-full max-w-6xl items-start gap-6">
