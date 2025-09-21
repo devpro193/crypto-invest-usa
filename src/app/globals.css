@@ -80,6 +80,10 @@ input:autofill {
   width: fit-content;
 }
 
+.new-scroll {
+  @apply fixed bottom-0 w-[100vw] overflow-hidden z-10 bg-background border-t;
+}
+
 @keyframes scrollText {
   from {
     transform: translateX(0%);
