@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Inter } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
 import Footer from "@/components/footer";
+import ReactQuery from "@/util/queryProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Bricolage_Grotesque({ subsets: ["latin"], display: "swap" });
 
@@ -11,17 +12,19 @@ export const metadata: Metadata = {
   description: "The new way to invest your digital currency.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+      <body className={`${inter.className} overflow-x-hidden`}>
+        <ReactQuery>
+          {children}
+          <Footer />
+          <Toaster />
+        </ReactQuery>
       </body>
     </html>
   );

@@ -5,45 +5,15 @@ import { Mail } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function Footer() {
-  let cousre = {
-    title: "Courses",
-    href: [
-      {
-        title: "MERN FullStack Course",
-        href: "https://courses.30dayscoding.com/courses/MERN-full-stack-web-development-64eebdb8e4b0a14befedc15d",
-        description:
-          "A complete mern full stack development course for 30 days coding challenge. Checkout on www.courses.30dayscoding.com",
-      },
-      {
-        title: "Master DSA Course",
-        href: "https://courses.30dayscoding.com/courses/DSA-revision-placement-course-64f93394e4b0e75ce98af312",
-        description:
-          "A full dsa mastry course from 30 days coding. Checkout on www.courses.30dayscoding.com",
-      },
-      {
-        title: "Next JS FullStack",
-        href: "https://courses.30dayscoding.com/courses/NEXT-JS-full-stack-web-development-course-64eebe15e4b06aa775217381-64eebe15e4b06aa775217381",
-        description:
-          "A live next js fullstack development cohort from 30 days coding. Checkout on www.courses.30dayscoding.com",
-      },
-      {
-        title: "All Courses Package",
-        href: "https://courses.30dayscoding.com/courses/All-courses-package-652a1994e4b05a145bae5cd0",
-        description:
-          "Get a course from 30 days coding. Checkout on www.courses.30dayscoding.com",
-      },
-    ],
-  };
-
   return (
-    <footer className="bg-footer w-full">
+    <footer className="bg-footer w-full border-t border-border">
       <div
         className={`flex max-lg:flex-col items-start p-[4rem_min(6.25rem,_7%)] max-w-[90rem] mx-auto gap-4`}
       >
         <section className="flex-1 flex flex-col gap-3">
           <Link href={"/"} className="flex gap-2 items-center">
-            <Image src={"/logo.png"} alt="name" width={40} height={40} />
-            <span className="text-xl">Crypto Invest USA</span>
+            <Image src={"/logo.png"} alt="name" width={150} height={150} />
+            {/* <span className="text-xl">Crypto Invest USA</span> */}
           </Link>
 
           <span className="max-w-lg">
@@ -154,10 +124,27 @@ export default function Footer() {
         </section>
       </div>
 
-      <div className="p-4 flex gap-1 text-xs font-semibold items-center justify-center bg-zinc-950">
-        <span>© 2024</span>
-        <span>CryptoInvestUSA.com</span>
-        {/* <span></span> */}
+      <div className="flex text-sm font-semibold items-center justify-center border-t border-secondary bg-card p-4 px-6 max-w-[90rem] mx-auto">
+        <div className="flex gap-1">
+          <span>© 2024</span>
+          <span>CryptoInvestUSA</span>
+        </div>
+
+        {/* <div className="flex gap-2 flex-wrap">
+          <span>Contact:</span>
+          <span className="text-muted-foreground flex-wrap flex gap-0.5">
+            <Link
+              className="hover:text-primary/70"
+              href={"support@cryptoinvestusa.com"}
+            >
+              support@cryptoinvestusa.com
+            </Link>
+            /
+            <Link className="hover:text-primary/70" href={"tel:+18886733106"}>
+              +18886733106
+            </Link>
+          </span>
+        </div> */}
       </div>
     </footer>
   );
