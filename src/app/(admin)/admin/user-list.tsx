@@ -1,16 +1,27 @@
 import { Badge } from "@/components/ui/badge";
 import { TableBody, TableCell, TableRow } from "@/components/ui/table";
-import prisma from "@/util/prismaClient";
-import { User } from "@prisma/client";
+// import prisma from "@/util/priTempUsersmaClient";
+// import { User } from "@prisma/client";
 import React from "react";
 
-async function getUser(): Promise<User[]> {
-  const data = await prisma.user.findMany();
-  return data;
-}
+// async function getUser(): Promise<User[]> {
+//   const data = await prisma.user.findMany();
+//   return data;
+// }
+
+type TempUser = {
+  id: number;
+  email: string;
+  fname: string;
+  lname?: string;
+  username: string;
+  phone: string;
+  password: string;
+  createdAt: Date;
+};
 
 export default async function UserList() {
-  const data = await getUser();
+  const data: TempUser[] = []
 
   return (
     <TableBody>
